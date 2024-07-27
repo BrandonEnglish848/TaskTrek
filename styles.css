@@ -1,0 +1,269 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    margin: 1%; 
+    background-image: url("images/23.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+h2 {
+    font-size: 15pt;
+    color: #4B5320;
+    background-color: rgb(244, 194, 194);
+    width: 50%;
+    padding: 1%;
+    border-radius: 5px;
+    animation: slideIn 1s forwards; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+table tr, tr td {
+    border: 1pt solid #4B5320;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    width: 100%;
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    background-color: rgb(246, 212, 220); 
+    background-color: rgba(246, 212, 220, 0.8); 
+    color: black; 
+    text-decoration: none;
+    cursor: pointer; 
+    pointer-events: none;
+    transition: background-color 0.3s ease; 
+}
+
+
+table th:hover {
+    background-color: #ff69b4;
+    color: white; /* Changement de couleur du texte */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Changer la police */
+}
+
+table tr td {
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Changer la police */
+    border-radius: 5px;
+    
+}
+table tr td p {
+    color: #4B5320; /* Couleur du texte */
+}
+
+table tr td input,
+table tr td select {
+    width: -webkit-fill-available;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Changer la police */
+    color: #4B5320; /* Couleur du texte */
+    /* This will make the input boxes fill with the row color. */
+    background-color: inherit;
+    
+    /* This makes the boxes fill with a standard color. 
+    background-color: rgb(246, 212, 220);
+    background-color: rgba(246, 212, 220, 0.8);
+    */
+    
+}
+
+table tr td input:hover,
+table tr td select:hover {
+    border-color: #ff69b4;
+}
+
+table tr td input:focus,
+table tr td select:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+
+#error_message, #success_message {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    max-height: 30px;
+    /* https://stackoverflow.com/questions/21993661/css-auto-hide-elements-after-5-seconds */
+    -moz-animation: cssAnimation 0s ease-in 4s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 4s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 4s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 4s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* https://stackoverflow.com/questions/21993661/css-auto-hide-elements-after-5-seconds */
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+        visibility:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+#error_message {
+    background-color: #f5c6c6; 
+    border: 1pt dotted red;
+}
+
+#success_message {
+    background-color: #b3ffb3; 
+    border: 1pt dotted green;
+}
+
+#controls_form {
+    position: relative;
+    bottom: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#controls_form select {
+    width: 30%;
+    margin-right:80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: rgb(150, 190, 130); 
+    background-color: rgba(150, 190, 130, 0.8); 
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#controls_form select:hover {
+    border-color: #ff69b4;
+}
+
+#controls_form select:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px; /* This fits right above all the content */
+    animation: slideIn 1s forwards; 
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar li a {
+    display: block;
+    padding: 6px;
+    background-color: rgb(246, 212, 220);
+    background-color: rgba(246, 212, 220, 0.8);
+    color: #4B5320;
+    text-decoration: none;
+   
+}
+
+.nav-bar li .active {
+    background-color: rgb(255, 182, 193);
+    background-color: rgba(255, 182, 193, 0.8);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.nav-bar li a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 8px; 
+    text-decoration: none; 
+}
+
+.nav-bar li a:hover {
+    background-color: #ff69b4;
+}
+
+.complete_row {
+    background-color: rgb(155, 246, 187);
+    background-color: rgba(155, 246, 187, 0.2);
+}
+
+.in_progress_row {
+    background-color: rgb(255, 236, 179);
+    background-color: rgba(255, 236, 179, 0.2);
+}
+
+.incomplete_row {
+    background-color: rgb(255, 179, 186);
+    background-color: rgba(255, 179, 186, 0.2);
+}
+
+.form-container {
+    margin-top: 40px; /* This leaves room for the nav-bar */
+    text-align: center;
+    border-radius: 1.5%;
+    overflow: hidden;
+    border: 1pt solid rgb(255, 182, 193);
+    height: 80vh;
+    /* This makes the container more opaque.
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, .9);
+    */
+}
+
+#table_contents {
+    padding: 1%;
+    height: 62.5vh;
+    overflow-y: scroll;
+    display: block;
+}
+
