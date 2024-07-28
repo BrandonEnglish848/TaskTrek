@@ -1,268 +1,312 @@
-html, body {
-    height: 100%;
+.nav-bar li a,
+table th {
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: background-color .3s;
+	text-decoration: none;
+	font-size: 16px
 }
+
+.form-container input[type=submit]:hover,
+.login input[type=submit]:hover,
+.nav-bar li a:hover,
+.register input[type=submit]:hover,
+table th:hover {
+	background-color: #ff69b4
+}
+
+.nav-bar,
+body,
+html {
+	margin: 0;
+	padding: 0
+}
+
+.background-image,
 body {
-    font-size: 12pt;
-    font-family: Arial, sans-serif;
-    margin: 1%; 
-    background-image: url("images/23.jpg");
-    background-size: 100% 100%;
-    background-position: center;
+	background-size: 100% 100%;
+	background-position: center
+}
+
+body {
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+	background-image: url("images/23.jpg")
 }
 
 @keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+	from {
+		opacity: 0;
+		transform: translateY(-50%)
+	}
 
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
 
 h2 {
-    font-size: 15pt;
-    color: #4B5320;
-    background-color: rgb(244, 194, 194);
-    width: 50%;
-    padding: 1%;
-    border-radius: 5px;
-    animation: slideIn 1s forwards; 
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    margin: 0;
+	color: #4b5320;
+	/*
+	background-color: #f4c2c2;
+	*/
+	padding: 1%;
+	border-radius: 5px;
+	animation: 1s forwards slideIn;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center
 }
 
-
-table tr, tr td {
-    border: 1pt solid #4B5320;
-    width: 100%;
+table tr,
+tr td {
+	border: 1pt solid #4b5320;
+	width: 100%
 }
 
 table {
-    width: 100%;
+	width: 100%
 }
 
 table th {
-    width: 100%;
-    font-size: 16px; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    background-color: rgb(246, 212, 220); 
-    background-color: rgba(246, 212, 220, 0.8); 
-    color: black; 
-    text-decoration: none;
-    cursor: pointer; 
-    pointer-events: none;
-    transition: background-color 0.3s ease; 
+	width: 100%;
+	border-radius: 5px;
+	background-color: rgb(246, 212, 220);
+	background-color: rgba(246, 212, 220, .8);
+	color: #000;
+	pointer-events: none
 }
 
+table tr td,
+table tr td input,
+table tr td select {
+	border: 1px solid #ccc;
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
 
 table th:hover {
-    background-color: #ff69b4;
-    color: white;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+	color: #fff;
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+.nav-bar li a,
+table tr td p {
+	color: #4b5320
 }
 
 table tr td {
-    padding: 4px;
-    border: 1px solid #ccc;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    border-radius: 5px;
-    
-}
-table tr td p {
-    color: #4B5320;
+	padding: 4px;
+	border-radius: 5px
 }
 
 table tr td input,
 table tr td select {
-    width: -webkit-fill-available;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: #4B5320;
-    background-color: inherit;
-    
-    /* This makes the boxes fill with a standard color. 
-    background-color: rgb(246, 212, 220);
-    background-color: rgba(246, 212, 220, 0.8);
-    */
-    
+	width: -webkit-fill-available;
+	padding: 8px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	transition: border-color .3s;
+	color: #4b5320;
+	background-color: inherit
 }
 
+#controls_form select:hover,
 table tr td input:hover,
 table tr td select:hover {
-    border-color: #ff69b4;
+	border-color: #ff69b4
 }
 
+#controls_form select:focus,
 table tr td input:focus,
 table tr td select:focus {
-    outline: none;
-    border-color: #ff69b4;
-    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+	outline: 0;
+	border-color: #ff69b4;
+	box-shadow: 0 0 5px rgba(255, 105, 180, .5)
 }
 
-
-#error_message, #success_message {
-    position: absolute;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    max-height: 30px;
-    /* https://stackoverflow.com/questions/21993661/css-auto-hide-elements-after-5-seconds */
-    -moz-animation: cssAnimation 0s ease-in 4s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 4s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 4s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 4s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+#error_message,
+#success_message {
+	position: absolute;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	max-height: 30px;
+	-moz-animation: 0s ease-in 4s forwards cssAnimation;
+	-webkit-animation: 0s ease-in 4s forwards cssAnimation;
+	-o-animation: 0s ease-in 4s forwards cssAnimation;
+	animation: 0s ease-in 4s forwards cssAnimation
 }
 
-/* https://stackoverflow.com/questions/21993661/css-auto-hide-elements-after-5-seconds */
 @keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        overflow:hidden;
-        visibility:hidden;
-    }
+	to {
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden
+	}
 }
+
 @-webkit-keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        visibility:hidden;
-    }
+	to {
+		width: 0;
+		height: 0;
+		visibility: hidden
+	}
 }
 
 #error_message {
-    background-color: #f5c6c6; 
-    border: 1pt dotted red;
+	background-color: #f5c6c6;
+	border: 1pt dotted red
 }
 
 #success_message {
-    background-color: #b3ffb3; 
-    border: 1pt dotted green;
+	background-color: #b3ffb3;
+	border: 1pt dotted green
 }
 
 #controls_form {
-    position: relative;
-    bottom: 10px;
-    margin-top: 2%;
-    margin-bottom: 2%;
+	position: relative;
+	bottom: 10px;
+	margin-top: 2%;
+	margin-bottom: 2%
 }
 
 #controls_form select {
-    width: 30%;
-    margin-right:80%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-    background-color: rgb(150, 190, 130); 
-    background-color: rgba(150, 190, 130, 0.8); 
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#controls_form select:hover {
-    border-color: #ff69b4;
-}
-
-#controls_form select:focus {
-    outline: none;
-    border-color: #ff69b4;
-    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+	width: 30%;
+	margin-right: 80%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	transition: border-color .3s;
+	background-color: rgb(150, 190, 130);
+	background-color: rgba(150, 190, 130, .8);
+	color: #000;
+	font-size: 16px;
+	cursor: pointer
 }
 
 .nav-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 40px;
-    animation: slideIn 1s forwards; 
+	list-style-type: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	animation: 1s forwards slideIn
 }
 
 .nav-bar li {
-    float: left;
+	float: left
 }
 
 .nav-bar li a {
-    display: block;
-    padding: 6px;
-    background-color: rgb(246, 212, 220);
-    background-color: rgba(246, 212, 220, 0.8);
-    color: #4B5320;
-    text-decoration: none;
-   
+	display: block;
+	background-color: rgb(246, 212, 220);
+	background-color: rgba(246, 212, 220, .8);
+	border-radius: 5px;
+	margin-right: 8px
 }
 
 .nav-bar li .active {
     background-color: rgb(255, 182, 193);
-    background-color: rgba(255, 182, 193, 0.8);
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-.nav-bar li a {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 8px; 
-    text-decoration: none; 
-}
-
-.nav-bar li a:hover {
-    background-color: #ff69b4;
+	background-color: rgba(255, 182, 193, .8);
+	cursor: not-allowed;
+	pointer-events: none
 }
 
 .complete_row {
-    background-color: rgb(155, 246, 187);
-    background-color: rgba(155, 246, 187, 0.2);
+	background-color: rgb(155, 246, 187);
+	background-color: rgba(155, 246, 187, .2);
 }
 
 .in_progress_row {
     background-color: rgb(255, 236, 179);
-    background-color: rgba(255, 236, 179, 0.2);
+	background-color: rgba(255, 236, 179, .2)
 }
 
 .incomplete_row {
     background-color: rgb(255, 179, 186);
-    background-color: rgba(255, 179, 186, 0.2);
+	background-color: rgba(255, 179, 186, .2)
 }
 
 .form-container {
-    margin-top: 40px;
-    text-align: center;
-    border-radius: 1.5%;
-    overflow: hidden;
-    border: 1pt solid rgb(255, 182, 193);
-    height: 80vh;
-    /* This makes the container more opaque.
-    background-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, .9);
-    */
+	overflow: hidden;
+	border: 1pt solid #ffb6c1;
+	max-height: 80vh;
+	font-size: 20px;
+	font-weight: 700;
+	color: #556b2f;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: 10px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+	margin-top: 50px
+}
+
+.form-container#thin{
+    max-width: 50vw;
 }
 
 #table_contents {
-    padding: 1%;
-    height: 62.5vh;
-    overflow-y: scroll;
-    display: block;
+	padding: 1%;
+	height: 62.5vh;
+	overflow-y: scroll;
+	display: block
 }
 
+body,
+html {
+	height: 100vh
+}
+
+.background-image {
+	background-image: url("images/keyboard.jpg");
+	height: 100vh;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start
+}
+
+.form-container label {
+	display: block;
+	text-align: left;
+	margin-bottom: 5px
+}
+
+.form-container input[type=email],
+.form-container input[type=password],
+.form-container input[type=text] {
+	width: calc(100% - 40px);
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ffb6c1;
+	border-radius: 5px;
+	transition: .3s
+}
+
+.form-container input[type=email]:focus,
+.form-container input[type=password]:focus,
+.form-container input[type=text]:focus {
+	border-color: #ff69b4;
+	transform: scale(1.05)
+}
+
+.form-container input[type=submit],
+.login input[type=submit],
+.register input[type=submit] {
+	background-color: #ffb6c1;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color .3s;
+	margin-top: 20px;
+	min-width: 80%
+}

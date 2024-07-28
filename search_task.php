@@ -11,7 +11,7 @@ require 'validator.php';
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-		<link rel="stylesheet" href="search.css">
+		<link rel="stylesheet" href="styles.css">
 		<title>Search task | TaskTrek</title>
 	</head>
 	<body>
@@ -21,7 +21,7 @@ require 'validator.php';
             <li><a class="active" href="search_task.php">Search</a></li>
             <li style="float: right;"><a href="logout.php">Logout</a></li>
         </ul>
-	    <div class="form-container">
+	    <div class="form-container" id="thin">
 	        <fieldset>
 	            <legend>
                     <h2>Search Task</h2>

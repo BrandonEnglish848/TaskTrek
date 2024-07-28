@@ -11,7 +11,7 @@ require "load_error_and_success_codes.php";
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="styles.css">
 		<title>Login | TaskTrek </title>
 	</head>
 	<body>
@@ -24,7 +24,10 @@ require "load_error_and_success_codes.php";
      }
      ?>
 		<div class="background-image">
-            <div class="form-container">
+            <ul class="nav-bar">
+                <li><a href="https://enrichhosting.us/"><img src="../favicon-removebg.png" style="max-height: 2.5em;"></a></li>
+            </ul>
+            <div class="form-container" id="thin">
                 <fieldset>
                     <!-- Form title -->
                     <legend>
